@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #a4344a;
+    text-decoration: underline;
+}
+
+.titulo{
+    text-align: center;
+    color: #a4344a;
+}
+
+.texto{
+    text-align: center;
+    color: #a4344a;
+}
+
+#faseDeGrupos{
+    justify-content: center;
+    text-align: center;
+    color: #a4344a;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.subtitulos{
+    text-align: center;
+    color: #a4344a;
+}
+
+.partidoGrupos{
+    height: 50px;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid #a4344a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#octavos{
+    display: none;
+    justify-content: center;
+    text-align: center;
+    color: #a4344a;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#eliminadoEnOctavos{
+    display: none;
+}
+
+#cuartos{
+    justify-content: center;
+    text-align: center;
+    color: #a4344a;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#semis{
+    justify-content: center;
+    text-align: center;
+    color: #a4344a;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#final{
+    justify-content: center;
+    text-align: center;
+    color: #a4344a;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+footer{
+    height: 130px;
+    background-image:url(img/footerMundial.png);
+    background-repeat: no-repeat;
+}
