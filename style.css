@@ -68,6 +68,10 @@ a {
     align-items: center;
 }
 
+#eliminadoEnCuartos{
+    display: none;
+}
+
 #semis{
     justify-content: center;
     text-align: center;
