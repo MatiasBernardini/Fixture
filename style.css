@@ -82,6 +82,10 @@ a {
     align-items: center;
 }
 
+#eliminadoEnSemis{
+    display: none;
+}
+
 #final{
     justify-content: center;
     text-align: center;
@@ -90,6 +94,10 @@ a {
     flex-direction: column;
     align-content: center;
     align-items: center;
+}
+
+#eliminadoEnFinal{
+    display: none;
 }
 
 footer{

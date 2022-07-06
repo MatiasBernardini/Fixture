@@ -24,6 +24,20 @@ function mostrarSemis () {
     document.getElementById('semis').style.display = 'flex';
 }
 
+function eliminadoSemis () {
+    document.getElementById('eliminadoEnSemis').style.display = 'flex';
+}
+
+let mensajeEliminadoSemis = document.getElementById ("textoEliminadoSemis")
+mensajeEliminadoSemis.className = "mt-4"
+
 function mostrarFinal () {
     document.getElementById('final').style.display = 'flex';
 }
+
+function eliminadoFinal () {
+    document.getElementById('eliminadoEnFinal').style.display = 'flex';
+}
+
+let mensajeEliminadoFinal = document.getElementById ("textoEliminadoFinal")
+mensajeEliminadoFinal.className = "mt-4"

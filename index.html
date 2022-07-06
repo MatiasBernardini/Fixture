@@ -130,9 +130,13 @@
               <label class="form-check-label" for="inlineRadio1">Argentina</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="semiPartido" id="inlineRadio2" value="option2">
+              <input onclick="eliminadoSemis();" class="form-check-input" type="radio" name="semiPartido" id="inlineRadio2" value="option2">
               <label class="form-check-label" for="inlineRadio2">Brasil</label>
             </div>
+          </div>
+
+          <div id="eliminadoEnSemis">
+            <p id="textoEliminadoSemis">Eliminado en SemiFinal</p>
           </div>
         </div>
 
@@ -145,9 +149,13 @@
               <label class="form-check-label" for="inlineRadio1">Argentina</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="finalPartido" id="inlineRadio2" value="option2">
+              <input onclick="eliminadoFinal();" class="form-check-input" type="radio" name="finalPartido" id="inlineRadio2" value="option2">
               <label class="form-check-label" for="inlineRadio2">Portugal</label>
             </div>
+          </div>
+
+          <div id="eliminadoEnFinal">
+            <p id="textoEliminadoFinal">Eliminado en la Final</p>
           </div>
         </div>
 
