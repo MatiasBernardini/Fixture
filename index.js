@@ -1,43 +1,58 @@
-function mostrarOctavos () {
-    document.getElementById('octavos').style.display = 'flex';
-}
+function changeDisplay (x) {
+    document.getElementById(x).style.display = 'flex';
+};
 
-function eliminadoOctavos () {
-    document.getElementById('eliminadoEnOctavos').style.display = 'flex';
-}
+function eliminarFases (x)
+{
+    document.getElementById (x)
+    eliminadoEnOctavos.className = "mt-4";
+    eliminadoEnCuartos.className = "mt-4";
+    eliminadoEnSemis.className = "mt-4";
+    eliminadoEnFinal.className = "mt-4";
+};
 
-let mensajeEliminadoOctavos = document.getElementById ("textoEliminadoOctavos")
-mensajeEliminadoOctavos.className = "mt-4"
+function callEvent(x, y)
+{
+    x.addEventListener("click", () => { changeDisplay(y) } )
 
-function mostrarCuartos () {
-    document.getElementById('cuartos').style.display = 'flex';
-}
+};
 
-function eliminadoCuartos () {
-    document.getElementById('eliminadoEnCuartos').style.display = 'flex';
-}
+let mensajeEliminadoOctavos = eliminarFases("textoEliminadoOctavos");
 
-let mensajeEliminadoCuartos = document.getElementById ("textoEliminadoCuartos")
-mensajeEliminadoCuartos.className = "mt-4"
+let mensajeEliminadoCuartos = eliminarFases("textoEliminadoCuartos");
 
-function mostrarSemis () {
-    document.getElementById('semis').style.display = 'flex';
-}
+let mensajeEliminadoSemis = eliminarFases("textoEliminadoSemis");
+  
+let mensajeEliminadoFinal = eliminarFases("textoEliminadoFinal");
 
-function eliminadoSemis () {
-    document.getElementById('eliminadoEnSemis').style.display = 'flex';
-}
+let botonFases = document.getElementById ("inlineRadio1 fases");
 
-let mensajeEliminadoSemis = document.getElementById ("textoEliminadoSemis")
-mensajeEliminadoSemis.className = "mt-4"
+let botonOctavos = document.getElementById ("inlineRadio1 octavos");
 
-function mostrarFinal () {
-    document.getElementById('final').style.display = 'flex';
-}
+let eliminadoOctavos = document.getElementById ("inlineRadio2 octavos");
 
-function eliminadoFinal () {
-    document.getElementById('eliminadoEnFinal').style.display = 'flex';
-}
+let botonCuartos = document.getElementById ("inlineRadio1 cuartos");
 
-let mensajeEliminadoFinal = document.getElementById ("textoEliminadoFinal")
-mensajeEliminadoFinal.className = "mt-4"
+let eliminadoCuartos = document.getElementById ("inlineRadio2 cuartos");
+
+let botonSemis = document.getElementById ("inlineRadio1 semis");
+
+let eliminadoSemis = document.getElementById ("inlineRadio2 semis");
+
+let eliminadoFinal = document.getElementById ("inlineRadio2 final");
+
+callEvent(botonFases, 'octavos');
+
+callEvent(eliminadoOctavos, 'eliminadoEnOctavos');
+
+callEvent(botonOctavos, 'cuartos');
+
+callEvent(eliminadoCuartos, 'eliminadoEnCuartos');
+
+callEvent(botonCuartos, 'semis');
+
+callEvent(eliminadoSemis, 'eliminadoEnSemis');
+
+callEvent(botonSemis, 'final');
+
+callEvent(eliminadoFinal, 'eliminadoEnFinal');
