@@ -1,8 +1,8 @@
 function changeDisplay (x) {
-    document.getElementById(x).style.display = 'flex';
+    document.getElementById(x).style.display = "flex";
 };
 
-function eliminarFases (x)
+function margenParaTexto (x)
 {
     document.getElementById (x)
     eliminadoEnOctavos.className = "mt-4";
@@ -11,19 +11,19 @@ function eliminarFases (x)
     eliminadoEnFinal.className = "mt-4";
 };
 
-function callEvent(x, y)
+function botonParaAvanzar(x, y)
 {
     x.addEventListener("click", () => { changeDisplay(y) } )
 
 };
 
-let mensajeEliminadoOctavos = eliminarFases("textoEliminadoOctavos");
+let mensajeEliminadoOctavos = margenParaTexto("textoEliminadoOctavos");
 
-let mensajeEliminadoCuartos = eliminarFases("textoEliminadoCuartos");
+let mensajeEliminadoCuartos = margenParaTexto("textoEliminadoCuartos");
 
-let mensajeEliminadoSemis = eliminarFases("textoEliminadoSemis");
+let mensajeEliminadoSemis = margenParaTexto("textoEliminadoSemis");
   
-let mensajeEliminadoFinal = eliminarFases("textoEliminadoFinal");
+let mensajeEliminadoFinal = margenParaTexto("textoEliminadoFinal");
 
 let botonFases = document.getElementById ("inlineRadio1 fases");
 
@@ -41,18 +41,18 @@ let eliminadoSemis = document.getElementById ("inlineRadio2 semis");
 
 let eliminadoFinal = document.getElementById ("inlineRadio2 final");
 
-callEvent(botonFases, 'octavos');
+botonParaAvanzar(botonFases, "octavos");
 
-callEvent(eliminadoOctavos, 'eliminadoEnOctavos');
+botonParaAvanzar(eliminadoOctavos, "eliminadoEnOctavos");
 
-callEvent(botonOctavos, 'cuartos');
+botonParaAvanzar(botonOctavos, "cuartos");
 
-callEvent(eliminadoCuartos, 'eliminadoEnCuartos');
+botonParaAvanzar(eliminadoCuartos, "eliminadoEnCuartos");
 
-callEvent(botonCuartos, 'semis');
+botonParaAvanzar(botonCuartos, "semis");
 
-callEvent(eliminadoSemis, 'eliminadoEnSemis');
+botonParaAvanzar(eliminadoSemis, "eliminadoEnSemis");
 
-callEvent(botonSemis, 'final');
+botonParaAvanzar(botonSemis, "final");
 
-callEvent(eliminadoFinal, 'eliminadoEnFinal');
+botonParaAvanzar(eliminadoFinal, "eliminadoEnFinal");
