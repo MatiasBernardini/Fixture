@@ -21,10 +21,10 @@ function renderCard (FutCoin){
     let cardRendered = `
     <div class="container card m-4" style="width: 18rem;">
         <img class="card-img-top" src="./img/${FutCoin.imagen}" alt="Card image cap">
-        <div class="card-body">
+        <div class="card-body" id=tarjetaFutCoin>
             <h5 class="card-title"> ${FutCoin.id}.${FutCoin.nombre}</h5>
             <p class="card-text">$ ${FutCoin.precio}</p>
-        <a href="#" class="btn btn-primary botonDeCompra" id="${FutCoin.id}" >Go somewhere</a>
+        <a href="#" class="btn btn-primary botonDeCompra" id="${FutCoin.id}" >Agregar al Carrito <i class="fa-solid fa-cart-plus"></i></a>
         </div>
     </div>
     `;
@@ -34,7 +34,7 @@ function renderCard (FutCoin){
 function limpiarCarrito () {
     let divCarrito = document.querySelector ("#carrito");
     divCarrito.innerHTML = "";
-}
+};
 
 function actulizarCarrito (carrito) {
     let divCarrito = document.querySelector ("#carrito");
@@ -42,12 +42,12 @@ function actulizarCarrito (carrito) {
         divCarrito.innerHTML += renderCard(FutCoin); 
     })
     divCarrito.innerHTML += `<h3>Precio Total: $  ${carrito.calcularTotal ()} </h3>`
-}
+};
 
 function renovarStorage(){
     localStorage.removeItem("carrito");
     localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+};
 
 window.addEventListener("DOMContentLoaded", (e) => {
     let storage = JSON.parse(localStorage.getItem ("carrito"));

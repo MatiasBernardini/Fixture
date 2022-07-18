@@ -18,6 +18,36 @@ a {
     color: #a4344a;
 }
 
+#cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonDeCompra{
+    background-color: #a4344a;
+    border: #a4344a;
+}
+
+#tarjetaFutCoin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #a4344a;
+}
+
+#tituloCarrito{
+    display: flex;
+    justify-content: center;
+    color: #a4344a;
+}
+
+#carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #a4344a;
+}
+
 #faseDeGrupos{
     justify-content: center;
     text-align: center;
