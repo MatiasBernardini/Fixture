@@ -35,6 +35,22 @@ a {
     color: #a4344a;
 }
 
+#apuesta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group{
+    width: 250px;
+    border: solid #a4344a;
+}
+
+.input-group-text{
+    background-color: #a4344a;
+    color: white;
+}
+
 #tituloCarrito{
     display: flex;
     justify-content: center;
