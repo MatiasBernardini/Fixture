@@ -119,14 +119,6 @@ arrayDeBotones.forEach ( boton => {
     })
 });
 
-margenParaTexto("textoEliminadoOctavos");
-
-margenParaTexto("textoEliminadoCuartos");
-
-margenParaTexto("textoEliminadoSemis");
-  
-margenParaTexto("textoEliminadoFinal");
-
 let botonFases = document.getElementById ("inlineRadio1 fases");
 
 let botonOctavos = document.getElementById ("inlineRadio1 octavos");
@@ -158,3 +150,11 @@ botonParaAvanzar(eliminadoSemis, "eliminadoEnSemis");
 botonParaAvanzar(botonSemis, "final");
 
 botonParaAvanzar(eliminadoFinal, "eliminadoEnFinal");
+
+margenParaTexto("textoEliminadoOctavos");
+
+margenParaTexto("textoEliminadoCuartos");
+
+margenParaTexto("textoEliminadoSemis");
+  
+margenParaTexto("textoEliminadoFinal");
