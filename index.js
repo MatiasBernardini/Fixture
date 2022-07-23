@@ -119,13 +119,13 @@ arrayDeBotones.forEach ( boton => {
     })
 });
 
-let mensajeEliminadoOctavos = margenParaTexto("textoEliminadoOctavos");
+margenParaTexto("textoEliminadoOctavos");
 
-let mensajeEliminadoCuartos = margenParaTexto("textoEliminadoCuartos");
+margenParaTexto("textoEliminadoCuartos");
 
-let mensajeEliminadoSemis = margenParaTexto("textoEliminadoSemis");
+margenParaTexto("textoEliminadoSemis");
   
-let mensajeEliminadoFinal = margenParaTexto("textoEliminadoFinal");
+margenParaTexto("textoEliminadoFinal");
 
 let botonFases = document.getElementById ("inlineRadio1 fases");
 
