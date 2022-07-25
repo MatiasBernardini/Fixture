@@ -28,6 +28,10 @@ a {
     border: #a4344a;
 }
 
+.comprarButton{
+    background-color: #a4344a;
+}
+
 #tarjetaFutCoin{
     display: flex;
     flex-direction: column;

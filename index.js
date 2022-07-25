@@ -41,7 +41,10 @@ function actulizarCarrito (carrito) {
     carrito.productos.forEach( FutCoin => {
         divCarrito.innerHTML += renderCard(FutCoin); 
     })
-    divCarrito.innerHTML += `<h3>Precio Total: $  ${carrito.calcularTotal ()} </h3>`
+    divCarrito.innerHTML += `<h3>Precio Total: $  ${carrito.calcularTotal ()} </h3>
+                             <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                             data-target="#comprarModal">Comprar</button>
+                            `
 };
 
 function renovarStorage(){
@@ -116,6 +119,14 @@ arrayDeBotones.forEach ( boton => {
         limpiarCarrito();
         actulizarCarrito(carrito);
         renovarStorage();
+
+        Toastify({
+            text: "Producto Agregado al Carrito",
+            className: "info",
+            style: {
+              background: "#a4344a",
+            }
+          }).showToast();
     })
 });
 
