@@ -1,19 +1,19 @@
-function changeDisplay (x) {
-    document.getElementById(x).style.display = "flex";
+function changeDisplay (id) {
+    document.getElementById(id).style.display = "flex";
 };
 
-function margenParaTexto (x)
+function margenParaTexto (idParaMargen)
 {
-    document.getElementById (x)
+    document.getElementById (idParaMargen)
     eliminadoEnOctavos.className = "mt-4";
     eliminadoEnCuartos.className = "mt-4";
     eliminadoEnSemis.className = "mt-4";
     eliminadoEnFinal.className = "mt-4";
 };
 
-function botonParaAvanzar(x, y)
+function botonParaAvanzar(idBoton, idDelIndex)
 {
-    x.addEventListener("click", () => { changeDisplay(y) } )
+    idBoton.addEventListener("click", () => { changeDisplay(idDelIndex) } )
 
 };
 
