@@ -1,3 +1,4 @@
+// FUNCIONES
 function changeDisplay (id) {
     document.getElementById(id).style.display = "flex";
 };
@@ -51,6 +52,8 @@ function renovarStorage(){
     localStorage.removeItem("carrito");
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
+// CARRITO
 
 window.addEventListener("DOMContentLoaded", (e) => {
     let storage = JSON.parse(localStorage.getItem ("carrito"));
@@ -129,6 +132,8 @@ arrayDeBotones.forEach ( boton => {
           }).showToast();
     })
 });
+
+// VARIABLES 
 
 let botonFases = document.getElementById ("inlineRadio1 fases");
 
