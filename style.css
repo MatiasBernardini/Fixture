@@ -68,6 +68,10 @@ a {
     color: #a4344a;
 }
 
+#datosJugadores{
+    display: flex;
+}
+
 #faseDeGrupos{
     justify-content: center;
     text-align: center;
