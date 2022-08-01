@@ -92,11 +92,11 @@ class Carrito {
 
 let catalogoFutCoin = [];
 
-let futCoin1 = new FutCoin (1, " 100 FutCoin", "futcoin.png", 1000 );
+let futCoin1 = new FutCoin (1, " 1.000 FutCoin", "futcoin.png", 1000 );
 
-let futCoin2 = new FutCoin (2, " 500 FutCoin", "futcoin.png", 5000 );
+let futCoin2 = new FutCoin (2, " 5.000 FutCoin", "futcoin.png", 5000 );
 
-let futCoin3 = new FutCoin (3, " 1000 FutCoin", "futcoin.png", 10000 );
+let futCoin3 = new FutCoin (3, " 10.000 FutCoin", "futcoin.png", 10000 );
 
 catalogoFutCoin.push (futCoin1);
 catalogoFutCoin.push (futCoin2);
