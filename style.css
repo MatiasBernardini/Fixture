@@ -68,8 +68,13 @@ a {
     color: #a4344a;
 }
 
-#datosJugadores{
+#comentarios{
     display: flex;
+    color: #a4344a;
+}
+
+.row{
+    --bs-gutter-x: 1.rem;
 }
 
 #faseDeGrupos{
