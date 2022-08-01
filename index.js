@@ -178,7 +178,7 @@ margenParaTexto("textoEliminadoFinal");
 const contenedorComentarios = document.getElementById ("comentarios");
 
 function obtenerComentario () {
-    fetch ("/data.json")
+    fetch ("data.json")
     .then ( (response) => {
         console.log (response);
         return response.json ();
