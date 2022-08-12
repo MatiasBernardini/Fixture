@@ -37,26 +37,36 @@ function limpiarCarrito () {
     divCarrito.innerHTML = "";
 };
 
+let totalCarrito;
+
 function actulizarCarrito (carrito) {
     let divCarrito = document.querySelector ("#carrito");
     carrito.productos.forEach( FutCoin => {
         divCarrito.innerHTML += renderCard(FutCoin); 
     })
-    divCarrito.innerHTML += `<h3>Precio Total: $  ${carrito.calcularTotal ()} </h3>
+
+    totalCarrito = carrito.calcularTotal();
+
+    valorXcien = totalCarrito * 10;
+
+    divCarrito.innerHTML += `<h3>Precio Total: $  ${totalCarrito} </h3>
                              <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
                              data-target="#comprarModal">Comprar</button>
                             `
+    let botonApuesta = document.querySelector ("#botonApuesta");
+
+    botonApuesta.setAttribute("placeholder", valorXcien);
 };
 
 function renovarStorage(){
-    localStorage.removeItem("carrito");
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    sessionStorage.removeItem("carrito");
+    sessionStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 // CARRITO
 
 window.addEventListener("DOMContentLoaded", (e) => {
-    let storage = JSON.parse(localStorage.getItem ("carrito"));
+    let storage = JSON.parse(sessionStorage.getItem ("carrito"));
     let carritoGuardado = new Carrito (storage.id, storage.productos);
     storage.productos.forEach(FutCoin => {
         carritoGuardado.productos.push(FutCoin);
