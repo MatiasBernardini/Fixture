@@ -159,6 +159,11 @@ a {
     display: none;
 }
 
+#botonDeFixture{
+    display: flex;
+    justify-content: center;
+}
+
 footer{
     height: 130px;
     background-image:url(img/footerMundial.png);

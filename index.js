@@ -50,7 +50,7 @@ function actulizarCarrito (carrito) {
     valorXcien = totalCarrito * 10;
 
     divCarrito.innerHTML += `<h3>Precio Total: $  ${totalCarrito} </h3>
-                             <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                             <button id="botonComprarFutcoin" class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
                              data-target="#comprarModal">Comprar</button>
                             `
     let botonApuesta = document.querySelector ("#botonApuesta");
@@ -209,4 +209,15 @@ function obtenerComentario () {
     });
 };
 
-obtenerComentario ()
+obtenerComentario ();
+
+const alertaDeBotonFinalizarFixtured = document.getElementById ("botonFinalizarFixture");
+alertaDeBotonFinalizarFixtured.onclick = mostrarAlertBotonFixture;
+
+function mostrarAlertBotonFixture () {
+    Swal.fire({
+        icon: "success",
+        title: "Su fixture ya ha sido guardado",
+        text: "¡Gracias por confiar en nosotros y muy buena suerte!",
+      })
+}
