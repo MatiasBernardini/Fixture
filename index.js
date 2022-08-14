@@ -63,6 +63,36 @@ function renovarStorage(){
     sessionStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
+function obtenerComentario () {
+    fetch ("data.json")
+    .then ( (response) => {
+        console.log (response);
+        return response.json ();
+    })
+    .then ( (data) => {
+        console.log (data);
+        console.log (data [0].body);
+
+        data.forEach ( (comentario) => {
+            let columna = document.createElement ("div")   
+            columna.className = "col-md-3"
+            columna.innerHTML = ` 
+                                 <h6>Nombre: ${comentario.nombre} </h>
+                                 <p>edad: ${comentario.edad} </p>
+            `
+            contenedorComentarios.appendChild (columna)
+        })
+    });
+};
+
+function mostrarAlertBotonFixture () {
+    Swal.fire({
+        icon: "success",
+        title: "Su fixture ya ha sido guardado",
+        text: "¡Gracias por confiar en nosotros y muy buena suerte!",
+      })
+};
+
 // CARRITO
 
 window.addEventListener("DOMContentLoaded", (e) => {
@@ -187,37 +217,7 @@ margenParaTexto("textoEliminadoFinal");
 
 const contenedorComentarios = document.getElementById ("comentarios");
 
-function obtenerComentario () {
-    fetch ("data.json")
-    .then ( (response) => {
-        console.log (response);
-        return response.json ();
-    })
-    .then ( (data) => {
-        console.log (data);
-        console.log (data [0].body);
-
-        data.forEach ( (comentario) => {
-            let columna = document.createElement ("div")   
-            columna.className = "col-md-3"
-            columna.innerHTML = ` 
-                                 <h6>Nombre: ${comentario.nombre} </h>
-                                 <p>edad: ${comentario.edad} </p>
-            `
-            contenedorComentarios.appendChild (columna)
-        })
-    });
-};
-
 obtenerComentario ();
 
 const alertaDeBotonFinalizarFixtured = document.getElementById ("botonFinalizarFixture");
-alertaDeBotonFinalizarFixtured.onclick = mostrarAlertBotonFixture;
-
-function mostrarAlertBotonFixture () {
-    Swal.fire({
-        icon: "success",
-        title: "Su fixture ya ha sido guardado",
-        text: "¡Gracias por confiar en nosotros y muy buena suerte!",
-      })
-}
+alertaDeBotonFinalizarFixtured.onclick = mostrarAlertBotonFixture
