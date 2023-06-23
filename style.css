@@ -61,6 +61,15 @@ a {
     color: #a4344a;
 }
 
+#comentarios{
+    display: flex;
+    align-items: center;
+}
+
+h6{
+    padding: 15px;
+}
+
 #carrito{
     display: flex;
     flex-direction: column;

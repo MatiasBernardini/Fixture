@@ -75,7 +75,7 @@ function obtenerComentario () {
 
         data.forEach ( (comentario) => {
             let columna = document.createElement ("div")   
-            columna.className = "col-md-3"
+            columna.className = "col-md-2"
             columna.innerHTML = ` 
                                  <h6>Nombre: ${comentario.nombre} </h>
                                  <p>edad: ${comentario.edad} </p>
